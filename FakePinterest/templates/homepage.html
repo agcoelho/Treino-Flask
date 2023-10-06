@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        fake pinterest
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block body %}
+<h1>oi</h1>
+{% block formulario %}
+<form method="POST">
+    {{ form.csrf_token }}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+    {{ form.senha.label() }}
+    {{ form.senha() }}
+
+    {{ form.botao_confirmar }}
+
+
+</form>
+
+{% endblock %}
+
+
+{% endblock %}
+</body>
+</html>

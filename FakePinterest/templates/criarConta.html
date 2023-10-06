@@ -1,0 +1,30 @@
+{% extends 'homepage.html' %}
+
+ {% block title %}
+    bem vindo
+
+ {% endblock %}
+
+{% block formulario %}
+<form method="POST">
+
+
+    {{ form.csrf_token }}
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+
+    {{ form.username.label() }}
+    {{ form.username() }}
+
+
+    {{ form.senha.label() }}
+    {{ form.senha() }}
+
+    {{ form.confirmar_senha.label() }}
+    {{ form.confirmar_senha() }}
+
+    {{ form.botao_confirmar() }}
+
+</form>
+{% endblock%}
